@@ -1,0 +1,14 @@
+@import '../abstracts/variables';
+
+.footer-wrapper {
+    position: sticky;
+    width: 100%;
+    height: $footer-height;
+    background-color: #222B45;
+    color: white;
+    padding: $footer-padding;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,25 @@
+<span ngbDropdown placement="bottom-right" autoClose="true">
+    <img src="../../../assets/media/avatars/male_avatar.svg" width="40" ngbDropdownToggle class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt="Profile pic">
+    <div class="dropdown-menu" ngbDropdownMenu>
+        <ul class="user-options">
+            <li class="dropdown-item" [routerLink]="['profile']"><a><fa-icon [icon]="['fas', 'user-circle']"></fa-icon> Profile</a></li>
+            <li class="dropdown-item" (click)="openEditModal(editModalContent)"><a><fa-icon [icon]="['fas', 'cog']"></fa-icon> Settings</a></li>
+            <li class="dropdown-item" (click)="logout()"><a><fa-icon [icon]="['fas', 'sign-out-alt']"></fa-icon> Logout</a></li>
+        </ul>
+    </div>
+</span>
+
+<ng-template #editModalContent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Modal title</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>One fine body&hellip;</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+</ng-template>

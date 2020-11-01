@@ -1,0 +1,14 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.dropdown-toggle::after {
+    display:none;
+}
+
+.dropdown-toggle{
+    border-radius: 50%;
+}
+
+.dropdown-menu{
+    min-width: 215px;
+    background: $header-background;
+}

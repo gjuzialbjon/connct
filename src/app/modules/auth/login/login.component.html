@@ -1,0 +1,38 @@
+<h1 class="auth-title">Login</h1>
+<h4 class="auth-subtitle">Welcome back! Login with your email.</h4>
+
+<div class="auth-form-wrapper">
+    <form [formGroup]="loginForm" class="auth-form">
+      <div class="form-group">
+        <label for="email" class="auth-label">Email *</label>
+        <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': (l.email.invalid && l.email.touched) || errCode==='auth/user-not-found' || errCode==='auth/too-many-requests'}" placeholder="Email">
+        <small *ngIf="l.email.invalid && l.email.touched" class="text-danger">Please insert a valid email address.<br></small>
+        <small *ngIf="errCode==='auth/user-not-found'" class="text-danger">The email you’ve entered doesn’t match any account.<br></small>
+        <small *ngIf="errCode==='auth/too-many-requests'" class="text-danger">Too many request attempts, please try again later.<br></small>
+      </div>
+      <div class="form-group">
+        <label for="password" class="auth-label">Password *</label>
+        <div class="input-group">
+          <input [type]="hide ? 'password' : 'text'" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': (l.password.invalid && l.password.touched) || errCode==='auth/wrong-password' }" placeholder="Password">
+          <div class="input-group-prepend">
+            <button (click)="hide = !hide" class="btn hide-show-btn">
+              <fa-icon [icon]="['fas', hide ? 'eye-slash' : 'eye']"></fa-icon>
+            </button>
+          </div>
+        </div>
+        <small *ngIf="l.password.invalid && l.password.touched" class="text-danger">Please insert a valid password. <br></small>
+        <small *ngIf="errCode==='auth/wrong-password'" class="text-danger">Wrong password.<br></small>
+      </div>
+      <div class="auth-btn">
+        <button class="btn btn-lg btn-primary btn-block" [disabled]="loading" type="button" (click)="login()">
+          <span *ngIf="!loading">LOG IN</span> 
+          <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status"></span>
+        </button>
+      </div>
+      <a class="no-account-btn" routerLink="../../auth/register">Dont have an account? Register here</a>
+  </form>
+</div>
+
+
+
+      

@@ -1,0 +1,6 @@
+@import '../abstracts/variables';
+
+.content-wrapper {
+    padding: $content-padding;
+    min-height: calc(100% - #{$footer-height});
+}

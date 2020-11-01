@@ -1,0 +1,18 @@
+<nav>
+    <div class="logo" routerLink="/home">Connct</div>
+    <ul>        
+        <li routerLink="/home/feed" routerLinkActive="active">
+            <fa-icon [icon]="['fas', 'home']"></fa-icon>
+            <span class="desktop-only"> Feed</span> 
+        </li>
+        <li>
+            <fa-icon [icon]="['fas', 'search']"></fa-icon>
+            <span class="desktop-only"> Search</span>
+        </li>
+        <li>
+            <app-user></app-user>
+        </li>
+    </ul>
+</nav>
+
+

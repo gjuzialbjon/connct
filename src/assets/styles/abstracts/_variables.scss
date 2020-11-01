@@ -1,0 +1,20 @@
+/* SCROLLBAR */
+$scrollbar-width: 5px;
+$scrollbar-color: rgb(41, 41, 184);
+$scrollbar-background: rgb(189, 186, 186);
+
+/* CONTENT SPACING */
+$header-height: 70px;
+$footer-height: 60px;
+$side-padding: 10%;
+$header-padding: 0px $side-padding;
+$footer-padding: 10px $side-padding;
+$content-padding: calc(#{$header-height} + 2rem) $side-padding calc(#{$footer-height} + 2rem);
+
+/* THEME COLORS */
+$background-color: #161A30;
+$main-text-color: #FFFFFF;
+$header-background: #222B45;
+
+/* TYPOGRAPHY */
+$main-font: 'Open Sans', sans-serif;
