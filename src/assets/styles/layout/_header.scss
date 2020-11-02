@@ -18,6 +18,7 @@ nav{
     justify-content: space-between;
 
     .logo{
+        font-size: 2rem;
         font-weight: 900;
         letter-spacing: 1px;
         text-transform: uppercase;
@@ -31,7 +32,7 @@ nav{
 
         li:not(.dropdown-item){
             padding: .7rem 1.7rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             letter-spacing: 1px;
             cursor: pointer;
@@ -43,6 +44,13 @@ nav{
             &:not(:last-child):hover{
                 background-color: rgba(104, 101, 101, 0.349);
             }
+
+            &:last-child{
+                padding: .7rem 0 .7rem 1.7rem;
+            }
+
+
+
         }
     }
 
@@ -51,7 +59,7 @@ nav{
         
         li.dropdown-item{
             padding: .7rem 1.5rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             letter-spacing: 1px;
             cursor: pointer;

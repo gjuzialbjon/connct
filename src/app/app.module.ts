@@ -12,10 +12,11 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { BaseComponent } from './layout/base/base.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { faHome, faUserCircle, faSignOutAlt, faCog, faSearch, faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUserCircle, faSignOutAlt, faCog, faSearch, faEye, faEyeSlash, faChevronUp} from '@fortawesome/free-solid-svg-icons';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { UserComponent } from './layout/user/user.component';
+import { UserComponent } from './layout/helpers/user/user.component';
 import { CommonModule } from '@angular/common';
+import { ScrollTopComponent } from './layout/helpers/scroll-top/scroll-top.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CommonModule } from '@angular/common';
     HeaderComponent,
     FooterComponent,
     BaseComponent,
-    UserComponent
+    UserComponent,
+    ScrollTopComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +45,6 @@ import { CommonModule } from '@angular/common';
 })
 export class AppModule { 
   constructor(private library: FaIconLibrary) {
-    library.addIcons(faHome, faUserCircle, faSignOutAlt, faCog, faSearch, faEyeSlash, faEye);
+    library.addIcons(faHome, faUserCircle, faSignOutAlt, faCog, faSearch, faEyeSlash, faEye, faChevronUp);
   }
 }
